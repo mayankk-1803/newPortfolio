@@ -150,7 +150,7 @@ export default function Contact() {
                   required
                   value={formState.name}
                   onChange={handleChange}
-                  placeholder="John Doe"
+                  placeholder="Your name"
                   className="px-4 py-3 rounded-xl bg-white/5 border border-white/5 hover:border-white/10 focus:border-accent-teal focus:bg-white/[0.08] text-white text-sm outline-none transition-all duration-300 w-full"
                 />
               </div>
@@ -167,7 +167,7 @@ export default function Contact() {
                   required
                   value={formState.email}
                   onChange={handleChange}
-                  placeholder="john@example.com"
+                  placeholder="your@email.com"
                   className="px-4 py-3 rounded-xl bg-white/5 border border-white/5 hover:border-white/10 focus:border-accent-cyan focus:bg-white/[0.08] text-white text-sm outline-none transition-all duration-300 w-full"
                 />
               </div>
