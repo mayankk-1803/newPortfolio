@@ -6,36 +6,36 @@ import { Trophy } from "lucide-react";
 
 interface CounterProps {
   value: number;
+  start: boolean;
   duration?: number; // in seconds
 }
 
-function Counter({ value, duration = 1.5 }: CounterProps) {
+function Counter({ value, start, duration = 1.5 }: CounterProps) {
   const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   useEffect(() => {
-    if (!isInView) return;
-    let start = 0;
-    const end = value;
-    if (start === end) return;
+    if (!start) return;
 
-    // Calculate dynamic delay step based on target value
+    let frameId: number;
+    let startTime: number | null = null;
     const totalMs = duration * 1000;
-    const incrementTime = Math.max(Math.floor(totalMs / end), 15);
 
-    const timer = setInterval(() => {
-      start += 1;
-      setCount(start);
-      if (start === end) {
-        clearInterval(timer);
+    const tick = (timestamp: number) => {
+      startTime ??= timestamp;
+      const progress = Math.min((timestamp - startTime) / totalMs, 1);
+      setCount(Math.round(progress * value));
+
+      if (progress < 1) {
+        frameId = requestAnimationFrame(tick);
       }
-    }, incrementTime);
+    };
 
-    return () => clearInterval(timer);
-  }, [value, duration, isInView]);
+    frameId = requestAnimationFrame(tick);
 
-  return <span ref={ref}>{count}</span>;
+    return () => cancelAnimationFrame(frameId);
+  }, [value, duration, start]);
+
+  return <span>{count}</span>;
 }
 
 const stats = [
@@ -66,8 +66,14 @@ const stats = [
 ];
 
 export default function Achievements() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.25 });
+
   return (
-    <section className="relative py-24 px-6 md:px-12 w-full max-w-7xl mx-auto z-20">
+    <section
+      ref={sectionRef}
+      className="relative py-24 px-6 md:px-12 w-full max-w-7xl mx-auto z-20"
+    >
       {/* Container Panel */}
       <div className="p-6 md:p-10 rounded-3xl glass-panel relative overflow-hidden flex flex-col md:flex-row items-center gap-10 glow-border text-left">
         {/* Decorative elements */}
@@ -104,7 +110,7 @@ export default function Achievements() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="text-4xl md:text-5xl font-display font-black text-white flex items-center">
-                <Counter value={stat.value} />
+                <Counter value={stat.value} start={isInView} />
                 <span className="text-accent-teal">{stat.suffix}</span>
               </div>
               <div className="text-sm font-bold text-white tracking-wide">{stat.label}</div>
