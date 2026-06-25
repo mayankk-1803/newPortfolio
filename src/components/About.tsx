@@ -57,23 +57,23 @@ export default function About() {
   const corePillars = [
     {
       icon: <Code2 className="w-5 h-5 text-accent-teal" />,
-      title: "MERN Stack Expertise",
-      desc: "Architecting high-fidelity SPAs and SSR sites using React, Next.js, and Express.",
+      title: "FinTech Development",
+      desc: "Building production-grade fintech applications — wallet systems, recharge platforms, and payment APIs at scale.",
     },
     {
       icon: <Brain className="w-5 h-5 text-accent-cyan" />,
       title: "AI Integration",
-      desc: "Connecting systems to Groq, OpenAI, and vector database structures.",
+      desc: "Integrating Groq API, AI chatbots, prompt engineering, and AI-powered features into modern web applications.",
     },
     {
       icon: <Server className="w-5 h-5 text-accent-blue" />,
       title: "Backend Systems",
-      desc: "Designing secure database operations, JWT authentication, and REST APIs.",
+      desc: "Designing secure REST APIs, JWT authentication, Redis caching, queue processing, and MongoDB at production scale.",
     },
     {
       icon: <Cloud className="w-5 h-5 text-accent-teal" />,
-      title: "Cloud &amp; DevOps",
-      desc: "Docker containerization and deployment onto AWS and Linux instances.",
+      title: "DevOps & Cloud",
+      desc: "PM2, Docker, aaPanel, AWS EC2/S3, and Linux server management for production deployments.",
     },
   ];
 
@@ -102,7 +102,7 @@ export default function About() {
 
           <div className="mt-4">
             <RevealText
-              text="I am a Full Stack MERN Developer and AI Integration Engineer passionate about building scalable applications, AI-powered platforms, and modern web experiences. My technical specialization encompasses React, Node.js, Express.js, MongoDB, Docker, AWS, and AI integrations. I build high-performance products that solve real-world problems with elegant, modular engineering."
+              text="I am a Full Stack Developer with hands-on experience building production-grade fintech applications — including wallet systems, recharge platforms, and payment API integrations. My technical foundation spans React.js, Node.js, Express.js, MongoDB, Redis, Docker, AWS, and AI integrations. I am passionate about scalable backend systems, modern frontend development, and cloud-first DevOps practices."
             />
           </div>
 
@@ -117,12 +117,12 @@ export default function About() {
             <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-accent-teal/10 to-transparent rounded-full blur-xl group-hover:scale-125 transition-transform duration-500" />
             <div className="font-mono text-xs text-accent-cyan mb-2">{"// CORE PRINCIPLE"}</div>
             <div className="text-white font-medium text-lg mb-1">
-              Intelligent Engineering &amp; Modern Craftsmanship
+              Production Engineering & Modern Craftsmanship
             </div>
             <p className="text-text-secondary text-sm leading-relaxed">
-              Every line of code is written with scalability, security, and rendering performance
-              in mind. I thrive on bridging the gap between state-of-the-art AI systems and core
-              user-centric interfaces.
+              Every line of code is written with scalability, security, and performance
+              in mind. From fintech payment pipelines to AI-powered interfaces — I build
+              systems that run reliably in production at scale.
             </p>
           </motion.div>
         </div>

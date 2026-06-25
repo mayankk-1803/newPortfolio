@@ -117,7 +117,7 @@ function Hero3D() {
 }
 
 export default function Hero() {
-  const badges = ["Available For Freelance", "Open To Opportunities", "Building AI Products"];
+  const badges = ["Available For Opportunities", "FinTech Developer", "MERN Stack Specialist", "Building Production Apps"];
   const [currentBadgeIndex, setCurrentBadgeIndex] = useState(0);
 
   useEffect(() => {
@@ -192,7 +192,7 @@ export default function Hero() {
           >
             <h2>Full Stack Developer</h2>
             <h2 className="text-accent-cyan font-mono text-base md:text-lg">
-              &amp; AI Integration Engineer
+              MERN Stack | FinTech Developer
             </h2>
           </motion.div>
 
@@ -203,8 +203,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
           >
-            MERN Stack Developer specializing in crafting scalable web applications,
-            AI-powered products, secure cloud architectures, and modern high-fidelity digital experiences.
+            Full Stack Developer with experience building scalable web applications and enterprise-grade FinTech platforms. Specialized in React.js, Node.js, Express.js, MongoDB, Redis, REST APIs, payment integrations, and modern DevOps practices.
           </motion.p>
 
           {/* CTAs */}

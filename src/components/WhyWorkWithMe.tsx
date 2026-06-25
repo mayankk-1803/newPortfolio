@@ -6,38 +6,38 @@ import { Layers, Sparkles, Workflow, Palette, CloudLightning, Gauge, HelpCircle 
 const cards = [
   {
     icon: <Layers className="w-6 h-6 text-accent-teal" />,
-    title: "Full Stack Development",
-    desc: "Seamlessly bridging frontend UI/UX logic with robust backend services and structured API schemas.",
+    title: "FinTech Development",
+    desc: "Building production-grade fintech systems — wallet engines, recharge APIs, payment gateways, cashback logic, and smart provider failover at scale.",
     glow: "rgba(0, 245, 212, 0.15)",
   },
   {
     icon: <Sparkles className="w-6 h-6 text-accent-cyan" />,
-    title: "AI Integration",
-    desc: "Leveraging LLMs, NLP, Prompt Engineering, and Groq/OpenAI APIs to create smart context-aware agent solutions.",
+    title: "Full Stack Engineering",
+    desc: "Seamlessly bridging React.js frontend with Node.js/Express.js backends — from REST API design to MongoDB data modeling and JWT security.",
     glow: "rgba(0, 187, 249, 0.15)",
   },
   {
     icon: <Workflow className="w-6 h-6 text-accent-blue" />,
     title: "Scalable Architecture",
-    desc: "Engineering decoupled system interfaces, robust database models (MongoDB/NeonDB), and secure REST operations.",
+    desc: "Engineering Redis caching, queue processing, decoupled service interfaces, and robust database models built for high-throughput production environments.",
     glow: "rgba(67, 97, 238, 0.15)",
   },
   {
     icon: <Palette className="w-6 h-6 text-accent-teal" />,
     title: "Modern UI/UX",
-    desc: "Designing immersive web applications with fluid animations, micro-interactions, and 100/100 device responsiveness.",
+    desc: "Designing immersive web applications with fluid animations, micro-interactions, Tailwind CSS, and 100% device responsiveness.",
     glow: "rgba(0, 245, 212, 0.15)",
   },
   {
     icon: <CloudLightning className="w-6 h-6 text-accent-cyan" />,
-    title: "Cloud Deployment",
-    desc: "Configuring containerized Docker images and hosting robust web products on cloud environments like AWS.",
+    title: "DevOps & Deployment",
+    desc: "Managing production deployments with PM2, Docker, aaPanel, Linux servers, AWS EC2/S3 — ensuring uptime, performance, and maintainability.",
     glow: "rgba(0, 187, 249, 0.15)",
   },
   {
     icon: <Gauge className="w-6 h-6 text-accent-blue" />,
     title: "Performance Optimization",
-    desc: "Achieving high rendering frames (60fps), clean bundle chunks, optimized asset loading, and Lighthouse scores of 95+.",
+    desc: "Optimizing API latency, Redis-backed caching, bundle performance, and Lighthouse scores — delivering fast, reliable experiences under real production load.",
     glow: "rgba(67, 97, 238, 0.15)",
   },
 ];

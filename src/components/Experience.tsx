@@ -6,6 +6,20 @@ import { Calendar, Briefcase } from "lucide-react";
 
 const experiences = [
   {
+    company: "Dizipay Innovations Pvt. Ltd.",
+    role: "Full Stack Developer",
+    duration: "April 2026 – Present",
+    highlights: [
+      "Developing and maintaining production-grade fintech applications using React.js, Node.js, Express.js, and MongoDB.",
+      "Built secure recharge, wallet, and payment modules handling real-time transactions at scale.",
+      "Integrated multiple recharge and payment providers with smart failover and retry logic.",
+      "Implemented Redis caching and queue processing to optimize high-throughput API performance.",
+      "Managing production deployment using PM2, Docker, Linux servers, and aaPanel.",
+      "Optimized backend APIs and overall application performance for enterprise-grade reliability.",
+    ],
+    accent: "#00F5D4",
+  },
+  {
     company: "CodeTech IT Solutions Pvt. Ltd.",
     role: "Frontend Developer Intern",
     duration: "June 2024 - July 2024",
@@ -14,7 +28,7 @@ const experiences = [
       "Optimized client-side rendering speed and improved UI modularity by 25%.",
       "Developed interactive user dashboards with elegant modern layouts and states.",
     ],
-    accent: "#00F5D4",
+    accent: "#00BBF9",
   },
   {
     company: "Unified Mentor",
@@ -26,7 +40,7 @@ const experiences = [
       "Integrated complex database relationships and optimized query latency schemas.",
       "Collaborated on designing highly scalable backend configurations and server APIs.",
     ],
-    accent: "#00BBF9",
+    accent: "#4361EE",
   },
 ];
 

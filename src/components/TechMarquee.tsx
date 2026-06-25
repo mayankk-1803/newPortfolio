@@ -2,22 +2,21 @@
 
 const technologies = [
   { name: "React", color: "rgba(0, 187, 249, 0.15)", text: "#00BBF9" },
-  { name: "Next.js", color: "rgba(255, 255, 255, 0.1)", text: "#FFFFFF" },
   { name: "Node.js", color: "rgba(0, 245, 212, 0.15)", text: "#00F5D4" },
   { name: "Express.js", color: "rgba(184, 192, 204, 0.1)", text: "#B8C0CC" },
   { name: "MongoDB", color: "rgba(0, 245, 212, 0.15)", text: "#00F5D4" },
+  { name: "Redis", color: "rgba(220, 38, 38, 0.2)", text: "#FF6B6B" },
   { name: "Docker", color: "rgba(0, 187, 249, 0.15)", text: "#00BBF9" },
+  { name: "PM2", color: "rgba(67, 97, 238, 0.15)", text: "#4361EE" },
   { name: "AWS", color: "rgba(67, 97, 238, 0.15)", text: "#4361EE" },
   { name: "Linux", color: "rgba(255, 255, 255, 0.1)", text: "#FFFFFF" },
   { name: "JavaScript", color: "rgba(0, 245, 212, 0.15)", text: "#00F5D4" },
-  { name: "TypeScript", color: "rgba(0, 187, 249, 0.15)", text: "#00BBF9" },
   { name: "Tailwind CSS", color: "rgba(0, 187, 249, 0.15)", text: "#00BBF9" },
+  { name: "Git", color: "rgba(220, 100, 50, 0.2)", text: "#F4845F" },
   { name: "GitHub", color: "rgba(255, 255, 255, 0.1)", text: "#FFFFFF" },
   { name: "REST APIs", color: "rgba(67, 97, 238, 0.15)", text: "#4361EE" },
-  { name: "JWT", color: "rgba(67, 97, 238, 0.15)", text: "#4361EE" },
-  { name: "AI APIs", color: "rgba(0, 245, 212, 0.15)", text: "#00F5D4" },
-  { name: "Prompt Engineering", color: "rgba(0, 187, 249, 0.15)", text: "#00BBF9" },
   { name: "Groq API", color: "rgba(67, 97, 238, 0.15)", text: "#4361EE" },
+  { name: "aaPanel", color: "rgba(0, 245, 212, 0.15)", text: "#00F5D4" },
 ];
 
 export default function TechMarquee() {

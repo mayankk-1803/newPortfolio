@@ -8,7 +8,7 @@ const projects = [
     id: "ai-saas",
     title: "AI SaaS Platform",
     category: "AI + SaaS",
-    role: "Full Stack &amp; AI Developer",
+    role: "Full Stack & AI Developer",
     duration: "2 Months",
     desc: "A premium software-as-a-service application integrating natural language models and automated agent workflows.",
     problem: "High computational latency for batch AI requests, lack of integrated client request caching.",
@@ -19,22 +19,24 @@ const projects = [
     live: "https://github.com/mayankk-1803",
     accent: "from-accent-teal to-accent-cyan",
     glowColor: "rgba(0, 245, 212, 0.15)",
+    featured: false,
   },
   {
-    id: "medimind",
-    title: "MediMind",
-    category: "AI Healthcare",
-    role: "Lead Developer",
-    duration: "3 Months",
-    desc: "An intelligent healthcare support application empowering users with symptom checking and clinical document parsing.",
-    problem: "Patients lack direct tools to cross-reference health symptoms or parse clinical reports.",
-    solution: "Developed an interactive symptom chatbot fueled by quantized models and custom medical prompt maps.",
-    impact: "Delivers instant symptom summaries and clinical insights safely.",
-    techs: ["React.js", "Node.js", "Express.js", "MongoDB", "Groq API", "JWT"],
+    id: "irecharge",
+    title: "iRecharge – FinTech Recharge & Wallet Platform",
+    category: "FinTech + MERN",
+    role: "Full Stack Developer",
+    duration: "Production",
+    desc: "Production-grade fintech platform supporting mobile recharge, DTH, FASTag, electricity, broadband, and utility bill payments with wallet management, cashback, referral system, and provider failover.",
+    problem: "No unified platform handling multi-provider recharge with wallet, cashback, and failover in real-time.",
+    solution: "Built a full MERN stack fintech system with Redis caching, JWT auth, PM2 process management, and smart provider routing.",
+    impact: "Live production platform at irecharge.in with real users, wallet transactions, and multiple payment API integrations.",
+    techs: ["React.js", "Node.js", "Express.js", "MongoDB", "Redis", "Docker", "PM2", "aaPanel", "Linux", "AWS", "JWT"],
     github: "https://github.com/mayankk-1803",
-    live: "https://github.com/mayankk-1803",
-    accent: "from-accent-cyan to-accent-blue",
-    glowColor: "rgba(0, 187, 249, 0.15)",
+    live: "https://irecharge.in",
+    accent: "from-accent-teal to-accent-blue",
+    glowColor: "rgba(0, 245, 212, 0.2)",
+    featured: true,
   },
   {
     id: "realtime-chat",
@@ -51,6 +53,7 @@ const projects = [
     live: "https://github.com/mayankk-1803",
     accent: "from-accent-blue to-accent-teal",
     glowColor: "rgba(67, 97, 238, 0.15)",
+    featured: false,
   },
   {
     id: "prime-origin",
@@ -67,6 +70,24 @@ const projects = [
     live: "https://github.com/mayankk-1803",
     accent: "from-accent-teal to-accent-blue",
     glowColor: "rgba(0, 245, 212, 0.15)",
+    featured: false,
+  },
+  {
+    id: "medimind",
+    title: "MediMind AI",
+    category: "AI Healthcare",
+    role: "Lead Developer",
+    duration: "3 Months",
+    desc: "An intelligent healthcare support application empowering users with symptom checking and clinical document parsing.",
+    problem: "Patients lack direct tools to cross-reference health symptoms or parse clinical reports.",
+    solution: "Developed an interactive symptom chatbot fueled by quantized models and custom medical prompt maps.",
+    impact: "Delivers instant symptom summaries and clinical insights safely.",
+    techs: ["React.js", "Node.js", "Express.js", "MongoDB", "Groq API", "JWT"],
+    github: "https://github.com/mayankk-1803",
+    live: "https://github.com/mayankk-1803",
+    accent: "from-accent-cyan to-accent-blue",
+    glowColor: "rgba(0, 187, 249, 0.15)",
+    featured: false,
   },
 ];
 
@@ -88,7 +109,7 @@ export default function Projects() {
           FEATURED PROJECTS
         </h2>
         <p className="max-w-xl text-text-secondary text-sm md:text-base font-light">
-          A showcase of full-stack products, real-time messaging, and smart artificial intelligence software applications.
+          A showcase of production fintech platforms, full-stack products, real-time messaging, and AI-powered applications.
         </p>
       </div>
 
@@ -120,6 +141,11 @@ export default function Projects() {
                   <span className="text-accent-teal uppercase tracking-widest font-semibold">
                     {proj.category}
                   </span>
+                  {proj.featured && (
+                    <span className="px-2.5 py-1 rounded-full bg-accent-teal/15 border border-accent-teal/30 text-accent-teal text-[10px] font-bold tracking-widest uppercase">
+                      ⭐ Featured
+                    </span>
+                  )}
                   <span className="text-white/20">|</span>
                   <span className="text-text-secondary">Role: {proj.role}</span>
                   <span className="text-white/20">|</span>
@@ -178,7 +204,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-accent-teal to-accent-cyan text-black text-xs font-semibold hover:opacity-90 transition-opacity duration-300"
                 >
-                  Live Preview
+                  {proj.featured ? "Live Demo" : "Live Preview"}
                   <ExternalLink className="w-4 h-4 text-black" />
                 </a>
               </div>
@@ -209,7 +235,7 @@ export default function Projects() {
 
                 {/* Subtitle tag */}
                 <div className="mt-4 px-4 py-1.5 rounded-full bg-white/5 border border-white/5 text-[10px] font-mono text-accent-cyan font-bold tracking-widest uppercase">
-                  Production Optimized
+                  {proj.featured ? "Live in Production" : "Production Optimized"}
                 </div>
               </div>
             </div>

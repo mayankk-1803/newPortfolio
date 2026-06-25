@@ -40,28 +40,28 @@ function Counter({ value, start, duration = 1.5 }: CounterProps) {
 
 const stats = [
   {
-    value: 4,
+    value: 15,
     suffix: "+",
-    label: "Major Projects",
-    desc: "Production-ready MERN and Next.js applications.",
+    label: "Projects Completed",
+    desc: "Production-ready MERN, FinTech, and AI applications.",
   },
   {
-    value: 2,
+    value: 5,
+    suffix: "+",
+    label: "Payment APIs Integrated",
+    desc: "Multiple recharge & payment provider integrations.",
+  },
+  {
+    value: 15,
+    suffix: "+",
+    label: "Core Technologies",
+    desc: "React, Node.js, Redis, Docker, AWS & more mastered.",
+  },
+  {
+    value: 1,
     suffix: "",
-    label: "Internships",
-    desc: "Collaborative corporate experience.",
-  },
-  {
-    value: 10,
-    suffix: "+",
-    label: "Core Techs",
-    desc: "Libraries and tools mastered.",
-  },
-  {
-    value: 100,
-    suffix: "+",
-    label: "Daily AI Requests",
-    desc: "Integrated pipelines under continuous load.",
+    label: "Live FinTech Platform",
+    desc: "iRecharge — production fintech app serving real users.",
   },
 ];
 
